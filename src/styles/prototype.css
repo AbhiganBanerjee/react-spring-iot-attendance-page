@@ -1,0 +1,179 @@
+
+/* Create general Card glowing style */
+.card{
+  animation: neonGlow 1.5s infinite linear;
+}
+  
+@keyframes neonGlow {
+  0% {
+    border-color: #ff00ff; 
+    box-shadow: 0 0 20px 0 #ff00ff;
+  }
+  25% {
+    border-color: #00ffff; 
+    box-shadow: 0 0 20px 0 #00ffff;
+  }
+  50% {
+    border-color: #ffff00; 
+    box-shadow: 0 0 20px 0 #ffff00;
+  }
+  75% {
+    border-color: #ff00ff; 
+    box-shadow: 0 0 20px 0 #ff00ff;
+  }
+  100% {
+    border-color: #ff00ff; 
+    box-shadow: 0 0 20px 0 #ff00ff;
+  }
+}
+
+.icons{
+  animation: iconGlow 1.5s infinite linear;
+}
+
+.heading{
+  animation: iconGlow 1.5s infinite linear;
+}
+
+@keyframes iconGlow {
+  0% {
+    color: #ff00ff; 
+    text-shadow:
+    0 0 5px #ff00ff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 30px #ff00ff,
+    0 0 40px #ff00ff,
+    0 0 55px #ff00ff,
+    0 0 5px #ff00ff
+    ;
+    /* text-shadow: 0 0 20px 0 #ff00ff; */
+  }
+  25% {
+    color: #00ffff; 
+    text-shadow:
+    20px 20px 20px 20px #00ffff,
+    20px 20px 20px 20px #00ffff,
+    20px 20px 20px 20px #00ffff,
+    20px 20px 20px 20px #00ffff,
+    20px 20px 20px 20px #00ffff,
+    20px 20px 20px 20px #00ffff
+    ;;
+  }
+  50% {
+    color: #ffff00; 
+    text-shadow: 0 0 20px 0 #ffff00;
+  }
+  75% {
+    color: #ff00ff; 
+    text-shadow: 0 0 20px 0 #ff00ff;
+  }
+  100% {
+    color: #ff00ff; 
+    text-shadow: 0 0 20px 0 #ff00ff;
+  }
+}
+
+/* Create another glowing effect when hover */
+.glow{
+  animation: hoverGlow 1.5s infinite linear;
+}
+  
+@keyframes hoverGlow {
+  0% {
+    border-color: #00ffff; 
+    box-shadow: 0 0 20px 0 #00ffff;
+  }
+  25% {
+    border-color: #00ffff; 
+    box-shadow: 0 0 20px 0 #00ffff;
+  }
+  50% {
+    border-color: #00ffff; 
+    box-shadow: 0 0 20px 0 #00ffff;
+  }
+  75% {
+    border-color: #00ffff; 
+    box-shadow: 0 0 20px 0 #00ffff;
+  }
+  100% {
+    border-color: #00ffff; 
+    box-shadow: 0 0 20px 0 #00ffff;
+  }
+}
+
+
+/* Create another dark glow effect */
+.darkglowing{
+  animation: darkGlow 1.5s infinite linear;
+}
+@keyframes darkGlow {
+  0% {
+    border-color: #ff00ff; 
+    box-shadow: 0 0 20px 0 #ff00ff;
+  }
+  25% {
+    border-color: #ff00ff; 
+    box-shadow: 0 0 20px 0 #ff00ff;
+  }
+  50% {
+    border-color: #ff00ff; 
+    box-shadow: 0 0 20px 0 #ff00ff;
+  }
+  75% {
+    border-color: #ff00ff; 
+    box-shadow: 0 0 20px 0 #ff00ff;
+  }
+  100% {
+    border-color: #ff00ff; 
+    box-shadow: 0 0 20px 0 #ff00ff;
+  }
+}
+  
+/* Styles for text to glow */
+.neonText-LightBlue{
+  font-family: monospace;
+  font-weight: bold;
+  color:#fff;
+  text-align:justify;
+  text-shadow:
+    0 0 5px #25d7fb,
+    0 0 10px #25d7fb,
+    0 0 15px #25d7fb,
+    0 0 20px #25d7fb,
+    0 0 25px #25d7fb,
+    0 0 30px #25d7fb
+    ;
+}
+.neonText-Lightgreen{
+  font-family: monospace;
+  font-weight: bold;
+  color:#fff;
+  text-align:justify;
+  text-shadow:
+    0 0 5px #00ff66,
+    0 0 10px #00ff66,
+    0 0 15px #00ff66,
+    0 0 20px #00ff66,
+    0 0 25px #00ff66,
+    0 0 30px #00ff66
+    ;
+}
+.neonText-LightPink{
+  font-family: monospace;
+  font-weight: bold;
+  color:#fff;
+  text-align:justify;
+  text-shadow:
+    0 0 5px #ff63a2,
+    0 0 10px #ff63a2,
+    0 0 15px #ff63a2,
+    0 0 20px #ff63a2,
+    0 0 25px #ff63a2,
+    0 0 30px #ff63a2
+    ;
+}
+
+   
+
+ 
