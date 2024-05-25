@@ -227,104 +227,6 @@ const MembersPage = ({isTheme})=>{
                     </h2>
                 </header>
 
-                {/* Create the main Grid for the Mentor card*/}
-                <Grid container spacing={2}>
-
-                    {/* Give space in left and right so that the Mentor card is alligned in middle */}
-                    <Grid item lg={2} md={2}/>
-
-                    {/* Now create a big seperate grid for the Project Guid Card only */}
-                    <Grid item xs={12} sm={12} lg={8} md={8}
-                        sx={{
-                            justifyContent:"center",
-                            alignItems:"center",
-                            display:"flex"
-                        }}
-                    >
-                        {/* IF the API is still loading show one skeleton card in the place of the mentor card */}
-                        {
-                            isLoading?<SkeletonCardComponent sx={mentorHoverStyle}/>
-                            :
-                            <>
-                                <Card className={isHover?hoverClassName:outClassName} sx={isHover?mentorHoverStyle:mentorOutStyle}>
-                                    <CardActionArea 
-                                        onMouseOver={
-                                            ()=>{
-                                                setIsHover(true);
-                                            }
-                                        }
-                                        onMouseOut={
-                                            ()=>{
-                                                setIsHover(false);
-                                            }
-                                        }
-                                    >
-                                        <CardHeader 
-                                            action={
-                                                <Person className={isHover? iconhoverClassName : iconOutClassName}/>
-                                            }
-                                            avatar={
-                                                <Avatar sx={isHover?iconHoverStyle:iconOutStyle} className={isHover?hoverClassName:outClassName}
-                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_s5VyM2WynwIZ7V8jJFhb3VcrmUQVSHE3-tucyfQjoA&s"
-                                                />
-                                            }
-                                            title={
-                                                <b style={{
-                                                    fontFamily:"monospace",
-                                                    fontWeight:"bold",
-                                                    fontSize: isScreenSize?"":"25px"
-                                                }}> 
-                                                    {mentor.name}
-                                                </b>
-                                            }
-                                            subheader={
-                                                <b style={{
-                                                    fontFamily:"monospace",
-                                                    fontWeight:"bold",
-                                                    fontSize: isScreenSize?"":"19px",
-                                                    color: isHover? hoverColor : outColor
-                                                }}>
-                                                    {mentor.role}
-                                                </b>
-                                            }
-                                        />   
-                                        <CardMedia
-                                            component="img"
-                                            height = "auto"
-                                            image={mentor.image}
-                                            title="Group_Mentor"
-                                            alt="Group_Mentor"
-                                        />         
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h6" component="div"
-                                                sx={{
-                                                    fontFamily:"monospace",
-                                                    fontWeight:"bold",
-                                                    color:"inherit"
-                                                }}
-                                            >
-                                                Contribution:
-                                            </Typography>
-                                            <Typography variant="body2" color="inherit"
-                                                sx={{
-                                                    fontFamily:"monospace",
-                                                    textAlign:"justify"
-                                                }}
-                                            >
-                                                {mentor.desc}
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card>
-                            </>
-                        }
-                    </Grid>
-                    
-                    {/* Give space in left and right so that the Mentor card is alligned in middle */}
-                    <Grid item lg={2} md={2}/>
-                </Grid>
-
-
                 {/* Create another seperate main grid for the members cards */}
                 <Grid container spacing={2}>
 
@@ -336,7 +238,7 @@ const MembersPage = ({isTheme})=>{
                                     justifyContent:"center",
                                     alignItems:"center",
                                     display:"flex",
-                                    marginTop:isScreenSize?"20px":"70px"
+                                    marginTop:isScreenSize?"20px":"10px"
                                 }}
                             >
                                 {/* If API is still loading show 4 skeleton cards in the place of member cards */}
@@ -439,6 +341,103 @@ const MembersPage = ({isTheme})=>{
                             </Grid>
                         )
                     }
+                </Grid>
+
+                {/* Create the main Grid for the Mentor card*/}
+                <Grid container spacing={2} sx={{marginTop:isScreenSize?"20px":"50px"}}>
+
+                    {/* Give space in left and right so that the Mentor card is alligned in middle */}
+                    <Grid item lg={2} md={2}/>
+
+                    {/* Now create a big seperate grid for the Project Guid Card only */}
+                    <Grid item xs={12} sm={12} lg={8} md={8}
+                        sx={{
+                            justifyContent:"center",
+                            alignItems:"center",
+                            display:"flex"
+                        }}
+                    >
+                        {/* IF the API is still loading show one skeleton card in the place of the mentor card */}
+                        {
+                            isLoading?<SkeletonCardComponent sx={mentorHoverStyle}/>
+                            :
+                            <>
+                                <Card className={isHover?hoverClassName:outClassName} sx={isHover?mentorHoverStyle:mentorOutStyle}>
+                                    <CardActionArea 
+                                        onMouseOver={
+                                            ()=>{
+                                                setIsHover(true);
+                                            }
+                                        }
+                                        onMouseOut={
+                                            ()=>{
+                                                setIsHover(false);
+                                            }
+                                        }
+                                    >
+                                        <CardHeader 
+                                            action={
+                                                <Person className={isHover? iconhoverClassName : iconOutClassName}/>
+                                            }
+                                            avatar={
+                                                <Avatar sx={isHover?iconHoverStyle:iconOutStyle} className={isHover?hoverClassName:outClassName}
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_s5VyM2WynwIZ7V8jJFhb3VcrmUQVSHE3-tucyfQjoA&s"
+                                                />
+                                            }
+                                            title={
+                                                <b style={{
+                                                    fontFamily:"monospace",
+                                                    fontWeight:"bold",
+                                                    fontSize: isScreenSize?"":"25px"
+                                                }}> 
+                                                    {mentor.name}
+                                                </b>
+                                            }
+                                            subheader={
+                                                <b style={{
+                                                    fontFamily:"monospace",
+                                                    fontWeight:"bold",
+                                                    fontSize: isScreenSize?"":"19px",
+                                                    color: isHover? hoverColor : outColor
+                                                }}>
+                                                    {mentor.role}
+                                                </b>
+                                            }
+                                        />   
+                                        <CardMedia
+                                            component="img"
+                                            height = "auto"
+                                            image={mentor.image}
+                                            title="Group_Mentor"
+                                            alt="Group_Mentor"
+                                        />         
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h6" component="div"
+                                                sx={{
+                                                    fontFamily:"monospace",
+                                                    fontWeight:"bold",
+                                                    color:"inherit"
+                                                }}
+                                            >
+                                                Contribution:
+                                            </Typography>
+                                            <Typography variant="body2" color="inherit"
+                                                sx={{
+                                                    fontFamily:"monospace",
+                                                    textAlign:"justify"
+                                                }}
+                                            >
+                                                {mentor.desc}
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                </Card>
+                            </>
+                        }
+                    </Grid>
+                    
+                    {/* Give space in left and right so that the Mentor card is alligned in middle */}
+                    <Grid item lg={2} md={2}/>
                 </Grid>
 
                 {/* Add a Float Button to Go on Top */}
