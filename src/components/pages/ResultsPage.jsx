@@ -45,7 +45,7 @@ const ResultsPage = ({isTheme})=>{
         setIsLoading(true);
 
         //make the API Call using AXIOS
-        axios.get("https://spring-iot-attendance-api.onrender.com/getResults")
+        axios.get("https://springreactiotattendance2-x7aiy7ga.b4a.run/getResults")
         .then((res)=>{
             setResults(res.data);
         })

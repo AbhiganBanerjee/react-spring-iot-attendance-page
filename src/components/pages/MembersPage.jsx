@@ -173,10 +173,10 @@ const MembersPage = ({isTheme})=>{
         //use Promise.all to fetch from multiple API
         Promise.all([
             //fetch mentor
-            axios("https://spring-iot-attendance-api.onrender.com/getMentor?id=6648d9a8d99a4618cbd002d7"),
+            axios("https://springreactiotattendance2-x7aiy7ga.b4a.run/getMentor?id=6648d9a8d99a4618cbd002d7"),
 
             //Fetch members also from API using axios
-            axios("https://spring-iot-attendance-api.onrender.com/getMembers"),
+            axios("https://springreactiotattendance2-x7aiy7ga.b4a.run/getMembers"),
         ])
         .then(([mentorRes, membersRes]) => {
             //set the data for mentor object
