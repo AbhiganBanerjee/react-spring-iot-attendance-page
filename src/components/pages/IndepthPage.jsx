@@ -56,13 +56,13 @@ const IndepthPage = ({isTheme})=>{
         //Promise.all is here used to fetch both the hardware and software from backend apis
         Promise.all([
             //fetch hardwares from API using axios
-            axios("https://springreactiotattendance2-x7aiy7ga.b4a.run/getHardwares"),
+            axios("https://spring-iot-attendance-api.onrender.com/getHardwares"),
 
             //Fetch Softwares also from API using axios
-            axios("https://springreactiotattendance2-x7aiy7ga.b4a.run/getSoftwares"),
+            axios("https://spring-iot-attendance-api.onrender.com/getSoftwares"),
 
             //Fetch the Blockdiagram also
-            axios("https://springreactiotattendance2-x7aiy7ga.b4a.run/getDiag"),
+            axios("https://spring-iot-attendance-api.onrender.com/getDiag"),
         ])
         .then(([hardwaresRes, softwaresRes, diagRes]) => {
             //set the data for hardwares array

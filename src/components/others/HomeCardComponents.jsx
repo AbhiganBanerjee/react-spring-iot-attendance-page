@@ -100,7 +100,7 @@ const HomeCardComponents = ({isTheme})=>{
         setIsLoading(true);
 
         //load all features
-        axios.get("https://springreactiotattendance2-x7aiy7ga.b4a.run/getFeatures")
+        axios.get("https://spring-iot-attendance-api.onrender.com/getFeatures")
         .then((res)=>{
             setFeatures(res.data);
         }).catch((err)=>console.log(err))

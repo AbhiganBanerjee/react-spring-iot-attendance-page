@@ -45,7 +45,7 @@ const PrototypePage = ({isTheme})=>{
         setIsLoading(true);
 
         //make the API Call using AXIOS
-        axios.get("https://springreactiotattendance2-x7aiy7ga.b4a.run/getPrototypes")
+        axios.get("https://spring-iot-attendance-api.onrender.com/getPrototypes")
         .then((res)=>{
             setPrototypes(res.data);
         })
